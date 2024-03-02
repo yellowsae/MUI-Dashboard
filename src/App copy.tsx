@@ -8,8 +8,8 @@ import { Add, Settings } from '@mui/icons-material'
  */
 
 // (({ theme }) => ({  })) 使用 theme
-// eslint-disable-next-line unused-imports/no-unused-vars
-const BlueButton = styled(Button)(({ theme }) => ({
+
+const BlueButton = styled(Button)(() => ({
   'backgroundColor': 'skyblue',
   'color': '#888',
   'margin': 5,
