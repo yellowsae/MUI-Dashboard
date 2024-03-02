@@ -13,10 +13,6 @@ interface CustomPaletteOptions extends ThemeOptions {
 export const theme: Theme = createTheme({
   // 定义 theme 中的颜色
   palette: {
-    primary: {
-      main: '#17605a',
-      light: 'skyblue',
-    },
     secondary: {
       main: '#15c630',
     },
