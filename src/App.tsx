@@ -7,7 +7,9 @@ import { Add, Settings } from '@mui/icons-material'
  * styled - 为组件定义样式 自定义样式  - 等同于组件中设置 sx={{ }} 属性
  */
 
-const BlueButton = styled(Button)({
+// (({ theme }) => ({  })) 使用 theme
+// eslint-disable-next-line unused-imports/no-unused-vars
+const BlueButton = styled(Button)(({ theme }) => ({
   'backgroundColor': 'skyblue',
   'color': '#888',
   'margin': 5,
@@ -18,14 +20,21 @@ const BlueButton = styled(Button)({
     backgroundColor: 'gray',
     color: 'white',
   },
-})
+}))
 
 function App() {
   return (
     <div>
       <Stack spacing={2} direction="row">
         <Button variant="text">Text</Button>
-        <Button variant="contained" color="secondary" size="small" startIcon={<Settings></Settings>}>Contained</Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="small"
+          startIcon={<Settings></Settings>}
+        >
+          Contained
+        </Button>
         <Button variant="contained" color="success" startIcon={<Add></Add>}>Contained</Button>
         <Button variant="outlined" disabled>Outlined</Button>
       </Stack>
@@ -56,7 +65,7 @@ function App() {
         {' '}
       </Button>
 
-      <BlueButton variant="contained" disabled>This is Blue Button </BlueButton>
+      <BlueButton variant="contained">This is Blue Button </BlueButton>
     </div>
   )
 }
